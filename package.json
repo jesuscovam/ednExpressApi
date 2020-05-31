@@ -10,15 +10,14 @@
     "start": "yarn build && node ./build/index.js"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.10.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.1",
-    "babel-cli": "^7.0.0-0",
-    "nodemon": "^2.0.4"
+    "@babel/preset-env": "^7.10.2"
   }
 }

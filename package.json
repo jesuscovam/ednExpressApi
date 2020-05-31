@@ -4,17 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node --exec babel-node src/index.js"
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "yarn clean && yarn build-babel",
+    "start": "yarn build && node ./build/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "@babel/preset-env": "^7.10.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
     "nodemon": "^2.0.4"
   }
 }
